@@ -22,12 +22,12 @@ class NavigationAvtivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
         setContentView(navigationBinding.root)
         setSupportActionBar(navigationBinding.toolbar)
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            window.statusBarColor = ContextCompat.getColor(this,R.color.black)
+            window.statusBarColor = ContextCompat.getColor(this, com.google.android.material.R.color.m3_ref_palette_black)
         }
 
         var toggle = ActionBarDrawerToggle(
             this, navigationBinding.drawerLayout,
-            navigationBinding.toolbar, R.string.open_drawer, R.string.closedrawer
+            navigationBinding.toolbar, R.string.open_drawer, R.string.close_drawer
         )
         navigationBinding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -51,10 +51,12 @@ class NavigationAvtivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
                 title = "Search"
                 supportFragmentManager.beginTransaction()
                 .replace(R.id.frameLayout, SearchFragment()).commit()}
-            R.id.favourite -> {title = "Favourite"
+            R.id.favourite -> {
+                title = "Favourite"
                 supportFragmentManager.beginTransaction()
                 .replace(R.id.frameLayout, FavouriteFragment()).commit()}
-            R.id.profile -> {title = "Profile"
+            R.id.profile -> {
+                title = "Profile"
                 supportFragmentManager.beginTransaction()
                 .replace(R.id.frameLayout, ProfileFragment()).commit()}
         }

@@ -10,13 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Good Morning User"
-        android:textColor="@color/white"
+        android:textColor="@android:color/white"
         android:textSize="30sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Life is beautiful"
         android:textSize="20sp"
-        android:textColor="@color/white"/>
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
